@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd -P $(dirname $0)
+
 [ ! -e '/usr/bin/curl' ] && yum -y install curl
 WanIp=`curl ipv4.icanhazip.com`
 LastIp=`cat ~/Last_IP.txt`
